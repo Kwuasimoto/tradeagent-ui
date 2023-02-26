@@ -20,7 +20,8 @@
           "apps/tradeagent-ui/src/assets"
         ],
         "styles": ["apps/tradeagent-ui/src/styles.scss"],
-        "scripts": []
+        "scripts": [],
+        "allowedCommonJsDependencies": ["pino", "lodash"]
       },
       "configurations": {
         "production": {

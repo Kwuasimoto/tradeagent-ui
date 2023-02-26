@@ -14,7 +14,17 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "typeRoots": ["./types.d.ts"],
+    "paths": {
+      "@tradeagent-ui/config": ["libs/config/src/index.ts"],
+      "@tradeagent-ui/init": ["libs/init/src/index.ts"],
+      "@tradeagent-ui/services": ["libs/services/src/index.ts"],
+      "path": ["node_modules/path-browserify"],
+      "stream": ["node_modules/stream-browserify"],
+      "tty": ["node_modules/tty-browserify"],
+      "util": ["node_modules/util"]
+    }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": ["node_modules", "tmp"],
+  "include": ["src/**/*"]
 }

@@ -1,13 +1,15 @@
-import { NxWelcomeComponent } from './nx-welcome.component';
-import { RouterModule } from '@angular/router';
 import { Component } from '@angular/core';
 
 @Component({
-  standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
   selector: 'tradeagent-ui-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  template: `
+    <div class="h-full">
+      <router-outlet></router-outlet>
+    </div>
+  `,
+  styles: [`
+
+  `],
 })
 export class AppComponent {
   title = 'tradeagent-ui';
