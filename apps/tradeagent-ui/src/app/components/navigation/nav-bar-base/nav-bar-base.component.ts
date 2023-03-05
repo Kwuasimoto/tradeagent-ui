@@ -61,7 +61,7 @@ export class NavBarBaseComponent {
   readonly #menuItemMatIconMap: HTMLAnchorLink[] = [
     { label: "Home", matIcon: "home", navCommand: ["/"], navOpts: { replaceUrl: true } },
     { label: "Account", matIcon: "person", navCommand: ["account"], navOpts: { replaceUrl: true } },
-    { label: "Console", matIcon: "panorama_wide_angle", navCommand: ["console"], navOpts: { replaceUrl: true } }
+    { label: "Trader", matIcon: "panorama_wide_angle", navCommand: ["trader"], navOpts: { replaceUrl: true } }
   ]
   constructor(
     readonly authService: AuthService,

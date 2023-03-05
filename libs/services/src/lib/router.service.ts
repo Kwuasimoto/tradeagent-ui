@@ -13,7 +13,16 @@ export class RouterService {
   ) {
   }
 
+  get url() {
+    return this.router.url
+  }
   go(command: string[], opts: NavigationExtras) {
-    this.router.navigate(command, opts)
+    return this.router.navigate(command, opts)
+  }
+
+  reload(optsA?: NavigationExtras, optsB?: NavigationExtras) {
+    this.router.navigateByUrl(this.router.url, optsA).then(() => {
+      this.router.navigate([this.router.url], optsB)
+    })
   }
 }

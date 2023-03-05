@@ -21,7 +21,7 @@
         ],
         "styles": ["apps/tradeagent-ui/src/styles.scss"],
         "scripts": [],
-        "allowedCommonJsDependencies": ["pino", "lodash"]
+        "allowedCommonJsDependencies": ["pino", "lodash", "base64-js", "joi"]
       },
       "configurations": {
         "production": {

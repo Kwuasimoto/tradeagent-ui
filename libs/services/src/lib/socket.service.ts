@@ -1,4 +1,4 @@
-import {Injectable} from "@angular/core";
+import { Injectable } from "@angular/core";
 import { ConfigService } from "@tradeagent-ui/config";
 import { LoggerService } from "./logger.service";
 
@@ -14,17 +14,17 @@ export class SocketService {
 
   connect() {
     this.#logger.info(`Attempting to connect ws to: [${this.config.wsUrl}]`)
-    this.#socket = new WebSocket(this.config.wsUrl+"/ws")
-    this.#socket.onopen = (event) => {
-      console.log('WebSocket connection opened');
+    this.#socket = new WebSocket(this.config.wsUrl+"/trade-console", "ws")
+
+    this.#socket.onopen = () => {
+      this.#logger.info("WebSocket opened")
+    }
+    this.#socket.onmessage = (event: MessageEvent<string>) => {
+      this.#logger.info("WebSocket message received:", { event })
     };
 
-    this.#socket.onmessage = (event) => {
-      console.log('WebSocket message received:', event.data);
-    };
-
-    this.#socket.onclose = (event) => {
-      console.log('WebSocket connection closed:', event);
+    this.#socket.onclose = (event: Event) => {
+      this.#logger.info("WebSocket connection closed:", { event })
     };
   }
 

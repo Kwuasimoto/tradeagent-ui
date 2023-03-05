@@ -1,24 +1,28 @@
 import {NgModule} from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
+
+import { NgForOf, NgIf } from "@angular/common";
+import { MatInputModule } from "@angular/material/input";
+import { MatIconModule } from "@angular/material/icon";
 import {
   LayoutAccountComponent,
   LayoutAuthComponent,
-  LayoutBaseComponent, NavBarAuthComponent,
-  NavBarBaseComponent
+  LayoutBaseComponent,
+  LayoutTraderComponent,
+  NavBarAuthComponent,
+  NavBarBaseComponent,
+  NavBarConsoleComponent
 } from "./components";
-import {NgForOf, NgIf} from "@angular/common";
-import { MatInputModule } from "@angular/material/input";
-import { MatIconModule } from "@angular/material/icon";
-import { LayoutConsoleComponent } from "./components/static/layout-console/layout-console.component";
 
 const statics = [
   LayoutBaseComponent,
   LayoutAuthComponent,
   LayoutAccountComponent,
-  LayoutConsoleComponent,
+  LayoutTraderComponent,
   NavBarAuthComponent,
-  NavBarBaseComponent
+  NavBarBaseComponent,
+  NavBarConsoleComponent
 ]
 
 @NgModule({

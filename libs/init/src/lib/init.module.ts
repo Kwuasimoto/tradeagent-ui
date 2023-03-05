@@ -10,7 +10,7 @@ function appInitializer(httpClient: HttpClient, config: ConfigService, authServi
   return () => authService.getSession()
     .then(userAuthentication => {
       authService.setSession(userAuthentication)
-      return new UserService(logger, httpClient, config, authService);
+      return new UserService(httpClient, config, authService);
     })
     .catch(err => {
       logger.warn("Failed to authenticate [UserService] in [appInitializer]", {err})

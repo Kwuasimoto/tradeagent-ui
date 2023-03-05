@@ -14,7 +14,7 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "typeRoots": ["./types.d.ts"],
+    "typeRoots": ["./types.d.ts", "./global.d.ts"],
     "paths": {
       "@tradeagent-ui/config": ["libs/config/src/index.ts"],
       "@tradeagent-ui/init": ["libs/init/src/index.ts"],

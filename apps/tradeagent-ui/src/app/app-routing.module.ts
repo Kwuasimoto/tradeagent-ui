@@ -3,12 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import {
   AccountComponent,
   AuthComponent,
-  ConsoleComponent,
   HomeComponent,
   LayoutAccountComponent,
   LayoutAuthComponent,
   LayoutBaseComponent,
-  LayoutConsoleComponent
+  LayoutTraderComponent, TraderComponent
 } from "./components";
 
 const routes: Routes = [
@@ -35,9 +34,9 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: LayoutConsoleComponent,
+    component: LayoutTraderComponent,
     children: [
-      { path: 'console', component: ConsoleComponent, pathMatch: 'full' }
+      { path: 'trader', component: TraderComponent, pathMatch: 'full' }
     ]
   }
 ];

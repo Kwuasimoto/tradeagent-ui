@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LayoutConsoleComponent } from './layout-console.component';
+import { NavBarConsoleComponent } from './nav-bar-console.component';
 
-describe('LayoutConsoleComponent', () => {
-  let component: LayoutConsoleComponent;
-  let fixture: ComponentFixture<LayoutConsoleComponent>;
+describe('NavBarConsoleComponent', () => {
+  let component: NavBarConsoleComponent;
+  let fixture: ComponentFixture<NavBarConsoleComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LayoutConsoleComponent],
+      declarations: [NavBarConsoleComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(LayoutConsoleComponent);
+    fixture = TestBed.createComponent(NavBarConsoleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

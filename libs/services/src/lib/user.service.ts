@@ -11,10 +11,10 @@ import {Router} from "@angular/router";
 })
 export class UserService {
 
+  readonly #logger = new LoggerService(UserService)
   #user?: User
 
   constructor(
-    private readonly logger: LoggerService,
     private readonly http: HttpClient,
     private readonly config: ConfigService,
     private readonly auth: AuthService
@@ -22,7 +22,7 @@ export class UserService {
     const authentication = auth.getAuth();
 
     if(!authentication.userID) {
-      logger.warn("No [userId] located on authentication")
+      this.#logger.warn("No [userId] located on authentication")
       return;
     }
 

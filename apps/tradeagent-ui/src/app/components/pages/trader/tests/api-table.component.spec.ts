@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ConsoleComponent } from './console.component';
+import { ApiTableComponent } from '../api-table.component';
 
-describe('ConsoleComponent', () => {
-  let component: ConsoleComponent;
-  let fixture: ComponentFixture<ConsoleComponent>;
+describe('ApiTableComponent', () => {
+  let component: ApiTableComponent;
+  let fixture: ComponentFixture<ApiTableComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ConsoleComponent],
+      declarations: [ApiTableComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ConsoleComponent);
+    fixture = TestBed.createComponent(ApiTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
